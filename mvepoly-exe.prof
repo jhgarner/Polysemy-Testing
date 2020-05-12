@@ -1,0 +1,105 @@
+	Tue May 12 15:02 2020 Time and Allocation Profiling Report  (Final)
+
+	   mvepoly-exe +RTS -N -h -P -xc -RTS
+
+	total time  =        0.36 secs   (1445 ticks @ 1000 us, 4 processors)
+	total alloc = 2,536,125,216 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE            SRC                                         %time %alloc  ticks     bytes
+
+put         Polysemy.State    src/Polysemy/State.hs:54:1-15                17.9   23.0    258 584000600
+>>=.\       Polysemy.Internal src/Polysemy/Internal.hs:(268,30)-(270,18)   14.9   15.5    216 392000688
+<*>.\       Polysemy.Internal src/Polysemy/Internal.hs:260:33-43           14.6   16.1    211 408000408
+get         Polysemy.State    src/Polysemy/State.hs:54:1-15                13.6   16.1    196 408000888
+fmap.\      Polysemy.Internal src/Polysemy/Internal.hs:252:32-43           12.3   10.1    178 256000256
+runSem      Polysemy.Internal src/Polysemy/Internal.hs:197:5-10             8.1    3.8    117  96000176
+pure        Polysemy.Internal src/Polysemy/Internal.hs:257:3-31             7.8    5.0    112 128000320
+someFunc    Lib               src/Lib.hs:(25,1)-(29,16)                     4.0    5.0     58 128013912
+>>=         Polysemy.Internal src/Polysemy/Internal.hs:(268,3)-(270,18)     2.9    0.0     42         0
+action      Lib               src/Lib.hs:19:1-23                            2.0    2.8     29  72000088
+<*>         Polysemy.Internal src/Polysemy/Internal.hs:260:3-43             1.3    2.5     19  64000064
+
+
+                                                                                                        individual      inherited
+COST CENTRE       MODULE                  SRC                                        no.     entries  %time %alloc   %time %alloc  ticks     bytes
+
+MAIN              MAIN                    <built-in>                                 206          0    0.0    0.0   100.0  100.0      0     68208
+ CAF              GHC.Conc.Signal         <entire-module>                            324          0    0.0    0.0     0.0    0.0      0       656
+ CAF              GHC.IO.Encoding         <entire-module>                            309          0    0.0    0.0     0.0    0.0      0      2656
+ CAF              GHC.IO.Encoding.Iconv   <entire-module>                            307          0    0.0    0.0     0.0    0.0      0       200
+ CAF              GHC.IO.Handle.FD        <entire-module>                            299          0    0.0    0.0     0.0    0.0      0     34704
+ CAF              GHC.IO.Handle.Text      <entire-module>                            297          0    0.0    0.0     0.0    0.0      0        72
+ CAF              GHC.Event.Thread        <entire-module>                            257          0    0.0    0.0     0.0    0.0      0      1240
+ CAF              GHC.Event.Poll          <entire-module>                            224          0    0.0    0.0     0.0    0.0      0        48
+ CAF:$ssend1      Lib                     <no location info>                         372          0    0.0    0.0     0.0    0.0      0         0
+  membership'     Polysemy.Internal.Union src/Polysemy/Internal/Union.hs:214:3-20    437          1    0.0    0.0     0.0    0.0      0         0
+ CAF:k_r5Ra       Lib                     <no location info>                         375          0    0.0    0.0     0.0    0.0      0         0
+  someFunc        Lib                     src/Lib.hs:(25,1)-(29,16)                  451          0    0.0    0.0     0.0    0.0      0         0
+   action         Lib                     src/Lib.hs:19:1-23                         452          0    0.0    0.0     0.0    0.0      0        16
+    get           Polysemy.State          src/Polysemy/State.hs:54:1-15              453          1    0.0    0.0     0.0    0.0      0         0
+ CAF:lvl_r5Rb     Lib                     <no location info>                         376          0    0.0    0.0     0.0    0.0      0         0
+  someFunc        Lib                     src/Lib.hs:(25,1)-(29,16)                  465          0    0.0    0.0     0.0    0.0      0        16
+   pure           Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          466          1    0.0    0.0     0.0    0.0      0         0
+ CAF:main1        Main                    <no location info>                         410          0    0.0    0.0     0.0    0.0      0        16
+  main            Main                    app/Main.hs:6:1-15                         412          1    0.0    0.0     0.0    0.0      0         0
+ CAF:someFunc1    Lib                     <no location info>                         382          0    0.0    0.0     0.0    0.0      0        16
+  someFunc        Lib                     src/Lib.hs:(25,1)-(29,16)                  413          1    0.0    0.0     0.0    0.0      0         0
+ CAF:someFunc10   Lib                     <no location info>                         377          0    0.0    0.0     6.2   12.0      0         0
+  someFunc        Lib                     src/Lib.hs:(25,1)-(29,16)                  419          0    2.8    5.0     6.2   12.0     41 128000144
+   <*>            Polysemy.Internal       src/Polysemy/Internal.hs:260:3-43          420    1000001    0.0    0.0     0.0    0.0      0         0
+   action         Lib                     src/Lib.hs:19:1-23                         429    1000001    1.2    1.6     3.4    6.9     17  40000040
+    >>=           Polysemy.Internal       src/Polysemy/Internal.hs:(268,3)-(270,18)  430    1000001    0.0    0.0     0.0    0.0      0         0
+    put           Polysemy.State          src/Polysemy/State.hs:54:1-15              435    1000001    2.2    5.4     2.2    5.4     32 136000152
+   fmap           Polysemy.Internal       src/Polysemy/Internal.hs:252:3-43          424    1000001    0.0    0.0     0.0    0.0      0         0
+ CAF:someFunc12   Lib                     <no location info>                         379          0    0.0    0.0     0.0    0.0      0         0
+  someFunc        Lib                     src/Lib.hs:(25,1)-(29,16)                  469          0    0.0    0.0     0.0    0.0      0        16
+   get            Polysemy.State          src/Polysemy/State.hs:54:1-15              470          1    0.0    0.0     0.0    0.0      0         0
+ CAF:someFunc3    Lib                     <no location info>                         373          0    0.0    0.0     0.0    0.0      0         0
+  someFunc        Lib                     src/Lib.hs:(25,1)-(29,16)                  479          0    0.0    0.0     0.0    0.0      0       576
+ CAF:someFunc8    Lib                     <no location info>                         380          0    0.0    0.0     0.0    0.0      0         0
+  someFunc        Lib                     src/Lib.hs:(25,1)-(29,16)                  415          0    0.0    0.0     0.0    0.0      0         0
+   >>=            Polysemy.Internal       src/Polysemy/Internal.hs:(268,3)-(270,18)  416          1    0.0    0.0     0.0    0.0      0         0
+ someFunc         Lib                     src/Lib.hs:(25,1)-(29,16)                  414          0    1.2    0.0    93.8   88.0     17     13160
+  >>=             Polysemy.Internal       src/Polysemy/Internal.hs:(268,3)-(270,18)  417    2000003    1.8    0.0    75.6   62.1     26         0
+   >>=.\          Polysemy.Internal       src/Polysemy/Internal.hs:(268,30)-(270,18) 418    2000004   11.3   11.7    73.8   62.1    163 296000592
+    runSem        Polysemy.Internal       src/Polysemy/Internal.hs:197:5-10          448    1000002    0.6    0.0     1.5    0.0      8        16
+     pure         Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          449          0    0.9    0.0     0.9    0.0     13         0
+    <*>           Polysemy.Internal       src/Polysemy/Internal.hs:260:3-43          422          0    0.5    0.0    47.5   41.0      7         0
+     <*>.\        Polysemy.Internal       src/Polysemy/Internal.hs:260:33-43         423    1000001   14.6   16.1    47.1   41.0    211 408000408
+      fmap        Polysemy.Internal       src/Polysemy/Internal.hs:252:3-43          427          0    0.0    0.0    32.5   24.9      0         0
+       fmap.\     Polysemy.Internal       src/Polysemy/Internal.hs:252:32-43         428          0    9.6    6.9    32.5   24.9    138 176000176
+        action    Lib                     src/Lib.hs:19:1-23                         434          0    0.0    0.0    22.9   18.0      0         0
+         get      Polysemy.State          src/Polysemy/State.hs:54:1-15              458          0    9.0    8.5    13.3   11.7    130 216000216
+          runSem  Polysemy.Internal       src/Polysemy/Internal.hs:197:5-10          459    2000002    3.1    1.9     4.1    3.2     45  48000048
+           pure   Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          464    1000001    1.0    1.3     1.0    1.3     14  32000032
+           return Polysemy.Internal       src/Polysemy/Internal.hs:265:3-15          463    1000001    0.0    0.0     0.0    0.0      0         0
+          pure    Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          462          0    0.2    0.0     0.2    0.0      3         0
+         put      Polysemy.State          src/Polysemy/State.hs:54:1-15              440          0    6.1    4.1     9.6    6.3     88 104000104
+          runSem  Polysemy.Internal       src/Polysemy/Internal.hs:197:5-10          445    1000001    1.5    0.9     2.9    2.2     22  24000024
+           pure   Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          447    1000001    1.4    1.3     1.4    1.3     20  32000032
+           return Polysemy.Internal       src/Polysemy/Internal.hs:265:3-15          446    1000001    0.0    0.0     0.0    0.0      0         0
+          pure    Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          444          0    0.6    0.0     0.6    0.0      9         0
+      pure        Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          468          0    0.0    0.0     0.0    0.0      0        56
+    action        Lib                     src/Lib.hs:19:1-23                         438          0    0.0    0.0    13.5    9.5      0         0
+     get          Polysemy.State          src/Polysemy/State.hs:54:1-15              460          0    1.9    1.6     3.9    2.8     27  40000040
+      pure        Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          461    1000001    2.0    1.3     2.0    1.3     29  32000032
+     put          Polysemy.State          src/Polysemy/State.hs:54:1-15              439          0    5.8    4.4     9.6    6.6     84 112000112
+      runSem      Polysemy.Internal       src/Polysemy/Internal.hs:197:5-10          441    1000001    2.1    0.9     2.1    0.9     31  24000024
+      pure        Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          443          0    1.7    1.3     1.7    1.3     24  32000032
+    get           Polysemy.State          src/Polysemy/State.hs:54:1-15              474          0    0.0    0.0     0.0    0.0      0       296
+     runSem       Polysemy.Internal       src/Polysemy/Internal.hs:197:5-10          475          2    0.0    0.0     0.0    0.0      0        48
+      pure        Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          478          1    0.0    0.0     0.0    0.0      0        32
+      return      Polysemy.Internal       src/Polysemy/Internal.hs:265:3-15          477          1    0.0    0.0     0.0    0.0      0         0
+     pure         Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          476          1    0.0    0.0     0.0    0.0      0        32
+  <*>             Polysemy.Internal       src/Polysemy/Internal.hs:260:3-43          421          0    0.8    2.5     0.8    2.5     12  64000064
+  action          Lib                     src/Lib.hs:19:1-23                         431          0    0.8    1.3    12.8   20.2     12  32000032
+   >>=            Polysemy.Internal       src/Polysemy/Internal.hs:(268,3)-(270,18)  432          0    1.1    0.0     5.5    3.8     16         0
+    >>=.\         Polysemy.Internal       src/Polysemy/Internal.hs:(268,30)-(270,18) 433    1000001    3.7    3.8     4.4    3.8     53  96000096
+     runSem       Polysemy.Internal       src/Polysemy/Internal.hs:197:5-10          450          0    0.8    0.0     0.8    0.0     11        16
+   get            Polysemy.State          src/Polysemy/State.hs:54:1-15              454          0    2.7    6.0     2.7    6.0     39 152000168
+   put            Polysemy.State          src/Polysemy/State.hs:54:1-15              436          0    3.7    9.1     3.7    9.1     54 232000232
+    pure          Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          442    1000001    0.0    0.0     0.0    0.0      0         0
+  fmap            Polysemy.Internal       src/Polysemy/Internal.hs:252:3-43          425          0    0.6    0.0     3.4    3.2      9         0
+   fmap.\         Polysemy.Internal       src/Polysemy/Internal.hs:252:32-43         426    1000001    2.8    3.2     2.8    3.2     40  80000080
+  get             Polysemy.State          src/Polysemy/State.hs:54:1-15              471          0    0.0    0.0     0.0    0.0      0       168
+  pure            Polysemy.Internal       src/Polysemy/Internal.hs:257:3-31          467          0    0.0    0.0     0.0    0.0      0        72
