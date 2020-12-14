@@ -1,0 +1,386 @@
+Stack has not been tested with GHC versions above 8.6, and using 8.10.1, this may fail
+Stack has not been tested with Cabal versions above 2.4, but version 3.2.0.0 was found, this may fail
+Glasgow Haskell Compiler, Version 8.10.1, stage 2 booted by GHC version 8.6.5
+*** initializing package database:
+Using binary package database: /nix/store/7vqkgjyjgbknwxm6hsqklqxb552kmmm9-ghc-8.10.1/lib/ghc-8.10.1/package.conf.d/package.cache
+Using binary package database: /home/jack/.stack/snapshots/x86_64-linux-nix/159173d73ada2e1ba04d147f03eb9a23555e8578c51f0ed48744558ad877a229/8.10.1/pkgdb/package.cache
+Using binary package database: /home/jack/code/haskell/mvepoly/.stack-work/install/x86_64-linux-nix/159173d73ada2e1ba04d147f03eb9a23555e8578c51f0ed48744558ad877a229/8.10.1/pkgdb/package.cache
+package flags []
+loading package database /nix/store/7vqkgjyjgbknwxm6hsqklqxb552kmmm9-ghc-8.10.1/lib/ghc-8.10.1/package.conf.d
+loading package database /home/jack/.stack/snapshots/x86_64-linux-nix/159173d73ada2e1ba04d147f03eb9a23555e8578c51f0ed48744558ad877a229/8.10.1/pkgdb
+loading package database /home/jack/code/haskell/mvepoly/.stack-work/install/x86_64-linux-nix/159173d73ada2e1ba04d147f03eb9a23555e8578c51f0ed48744558ad877a229/8.10.1/pkgdb
+wired-in package ghc-prim mapped to ghc-prim-0.6.1
+wired-in package integer-wired-in mapped to integer-gmp-1.0.3.0
+wired-in package base mapped to base-4.14.0.0
+wired-in package rts mapped to rts
+wired-in package template-haskell mapped to template-haskell-2.16.0.0
+wired-in package ghc mapped to ghc-8.10.1
+!!! initializing package database: finished in 28.59 milliseconds, allocated 14.887 megabytes
+*** initializing package database:
+package flags []
+loading package database /nix/store/7vqkgjyjgbknwxm6hsqklqxb552kmmm9-ghc-8.10.1/lib/ghc-8.10.1/package.conf.d
+loading package database /home/jack/.stack/snapshots/x86_64-linux-nix/159173d73ada2e1ba04d147f03eb9a23555e8578c51f0ed48744558ad877a229/8.10.1/pkgdb
+loading package database /home/jack/code/haskell/mvepoly/.stack-work/install/x86_64-linux-nix/159173d73ada2e1ba04d147f03eb9a23555e8578c51f0ed48744558ad877a229/8.10.1/pkgdb
+wired-in package ghc-prim mapped to ghc-prim-0.6.1
+wired-in package integer-wired-in mapped to integer-gmp-1.0.3.0
+wired-in package base mapped to base-4.14.0.0
+wired-in package rts mapped to rts-1.0
+wired-in package template-haskell mapped to template-haskell-2.16.0.0
+wired-in package ghc mapped to ghc-8.10.1
+!!! initializing package database: finished in 3.58 milliseconds, allocated 3.807 megabytes
+*** Chasing dependencies:
+Chasing modules from: *Main.hs
+!!! Chasing dependencies: finished in 0.99 milliseconds, allocated 0.835 megabytes
+Stable obj: {}
+Stable BCO: {}
+Ready for upsweep
+  [NONREC
+      ModSummary {
+         ms_hs_date = 2020-05-23 17:13:07.975483646 UTC
+         ms_mod = Main,
+         ms_textual_imps = [(Nothing, Prelude),
+                            (Nothing, Control.Monad.State)]
+         ms_srcimps = []
+      }]
+*** Deleting temp files:
+compile: input file Main.hs
+*** Checking old interface for Main (use -ddump-hi-diffs for more details):
+[1 of 1] Compiling Main             ( Main.hs, Main.o )
+*** Parser [Main]:
+!!! Parser [Main]: finished in 14.77 milliseconds, allocated 1.699 megabytes
+*** Renamer/typechecker [Main]:
+!!! Renamer/typechecker [Main]: finished in 68.84 milliseconds, allocated 51.802 megabytes
+*** Desugar [Main]:
+Result size of Desugar (before optimization)
+  = {terms: 691, types: 40,667, coercions: 0, joins: 0/62}
+Result size of Desugar (after optimization)
+  = {terms: 671, types: 40,265, coercions: 0, joins: 0/59}
+!!! Desugar [Main]: finished in 8.67 milliseconds, allocated 5.943 megabytes
+
+Main.hs:9:14: warning: [-Wpartial-type-signatures]
+    • Found type wildcard ‘_’
+        standing for ‘StateT
+                        ()
+                        (StateT
+                           ()
+                           (StateT
+                              ()
+                              (StateT
+                                 ()
+                                 (StateT
+                                    ()
+                                    (StateT
+                                       ()
+                                       (StateT
+                                          ()
+                                          (StateT
+                                             ()
+                                             (StateT
+                                                ()
+                                                (StateT
+                                                   ()
+                                                   (StateT
+                                                      ()
+                                                      (StateT
+                                                         ()
+                                                         (StateT
+                                                            ()
+                                                            (StateT
+                                                               ()
+                                                               (StateT
+                                                                  ()
+                                                                  (StateT
+                                                                     ()
+                                                                     (StateT
+                                                                        ()
+                                                                        (StateT
+                                                                           ()
+                                                                           (StateT
+                                                                              ()
+                                                                              (StateT
+                                                                                 ()
+                                                                                 (StateT
+                                                                                    ()
+                                                                                    (StateT
+                                                                                       ()
+                                                                                       (StateT
+                                                                                          ()
+                                                                                          (StateT
+                                                                                             ()
+                                                                                             (StateT
+                                                                                                ()
+                                                                                                (StateT
+                                                                                                   ()
+                                                                                                   (StateT
+                                                                                                      ()
+                                                                                                      (StateT
+                                                                                                         ()
+                                                                                                         (StateT
+                                                                                                            ()
+                                                                                                            (StateT
+                                                                                                               ()
+                                                                                                               (StateT
+                                                                                                                  ()
+                                                                                                                  (StateT
+                                                                                                                     ()
+                                                                                                                     (StateT
+                                                                                                                        ()
+                                                                                                                        (StateT
+                                                                                                                           ()
+                                                                                                                           (StateT
+                                                                                                                              ()
+                                                                                                                              (StateT
+                                                                                                                                 ()
+                                                                                                                                 (StateT
+                                                                                                                                    ()
+                                                                                                                                    (StateT
+                                                                                                                                       ()
+                                                                                                                                       (StateT
+                                                                                                                                          ()
+                                                                                                                                          (StateT
+                                                                                                                                             ()
+                                                                                                                                             (StateT
+                                                                                                                                                ()
+                                                                                                                                                (StateT
+                                                                                                                                                   ()
+                                                                                                                                                   (StateT
+                                                                                                                                                      ()
+                                                                                                                                                      (StateT
+                                                                                                                                                         ()
+                                                                                                                                                         (StateT
+                                                                                                                                                            ()
+                                                                                                                                                            (StateT
+                                                                                                                                                               ()
+                                                                                                                                                               (StateT
+                                                                                                                                                                  ()
+                                                                                                                                                                  (StateT
+                                                                                                                                                                     ()
+                                                                                                                                                                     (StateT
+                                                                                                                                                                        ()
+                                                                                                                                                                        (StateT
+                                                                                                                                                                           ()
+                                                                                                                                                                           (StateT
+                                                                                                                                                                              ()
+                                                                                                                                                                              (StateT
+                                                                                                                                                                                 ()
+                                                                                                                                                                                 (StateT
+                                                                                                                                                                                    ()
+                                                                                                                                                                                    (StateT
+                                                                                                                                                                                       ()
+                                                                                                                                                                                       (StateT
+                                                                                                                                                                                          ()
+                                                                                                                                                                                          (StateT
+                                                                                                                                                                                             ()
+                                                                                                                                                                                             (StateT
+                                                                                                                                                                                                ()
+                                                                                                                                                                                                (StateT
+                                                                                                                                                                                                   ()
+                                                                                                                                                                                                   (StateT
+                                                                                                                                                                                                      ()
+                                                                                                                                                                                                      (StateT
+                                                                                                                                                                                                         ()
+                                                                                                                                                                                                         IO)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+                        ()’
+    • In the type ‘_ -> IO ()’
+      In the type signature: manyState :: _ -> IO ()
+  |
+9 | manyState :: _ -> IO ()
+  |              ^
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 8,003, types: 175,401, coercions: 7,453, joins: 0/1,946}
+Result size of Simplifier iteration=2
+  = {terms: 337, types: 11,447, coercions: 7,453, joins: 0/0}
+Result size of Simplifier
+  = {terms: 337, types: 11,447, coercions: 7,453, joins: 0/0}
+!!! Simplifier [Main]: finished in 241.69 milliseconds, allocated 342.098 megabytes
+*** Specialise [Main]:
+Result size of Specialise
+  = {terms: 13,148, types: 368,572, coercions: 91,071, joins: 0/3}
+!!! Specialise [Main]: finished in 98.06 milliseconds, allocated 185.211 megabytes
+*** Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = False}) [Main]:
+Result size of Float out(FOS {Lam = Just 0,
+                              Consts = True,
+                              OverSatApps = False})
+  = {terms: 19,538, types: 569,062, coercions: 91,071, joins: 0/237}
+!!! Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = False}) [Main]: finished in 149.38 milliseconds, allocated 127.687 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 1,019,933,
+     types: 22,906,604,
+     coercions: 21,568,148,
+     joins: 0/56,839}
+Result size of Simplifier iteration=2
+  = {terms: 719,045,
+     types: 18,696,599,
+     coercions: 7,772,258,
+     joins: 0/35,461}
+Result size of Simplifier iteration=3
+  = {terms: 686,147,
+     types: 18,450,797,
+     coercions: 6,313,282,
+     joins: 0/25,497}
+Result size of Simplifier iteration=4
+  = {terms: 675,818,
+     types: 18,373,718,
+     coercions: 5,305,532,
+     joins: 0/25,151}
+Result size of Simplifier
+  = {terms: 675,818,
+     types: 18,373,718,
+     coercions: 5,305,532,
+     joins: 0/25,151}
+!!! Simplifier [Main]: finished in 78812.44 milliseconds, allocated 165077.630 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 674,382,
+     types: 18,349,666,
+     coercions: 5,275,828,
+     joins: 0/24,877}
+Result size of Simplifier iteration=2
+  = {terms: 673,104,
+     types: 18,332,192,
+     coercions: 5,246,232,
+     joins: 0/24,667}
+Result size of Simplifier iteration=3
+  = {terms: 671,732,
+     types: 18,313,672,
+     coercions: 5,216,760,
+     joins: 0/24,461}
+Result size of Simplifier iteration=4
+  = {terms: 670,254,
+     types: 18,293,830,
+     coercions: 5,187,428,
+     joins: 0/24,259}
+Result size of Simplifier
+  = {terms: 670,254,
+     types: 18,293,830,
+     coercions: 5,187,428,
+     joins: 0/24,259}
+!!! Simplifier [Main]: finished in 37552.03 milliseconds, allocated 68683.267 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 668,752,
+     types: 18,273,184,
+     coercions: 5,158,252,
+     joins: 0/24,047}
+Result size of Simplifier iteration=2
+  = {terms: 667,326,
+     types: 18,252,110,
+     coercions: 5,129,248,
+     joins: 0/23,857}
+Result size of Simplifier iteration=3
+  = {terms: 665,844,
+     types: 18,230,166,
+     coercions: 5,100,432,
+     joins: 0/23,661}
+Result size of Simplifier iteration=4
+  = {terms: 664,320,
+     types: 18,207,262,
+     coercions: 5,071,820,
+     joins: 0/23,471}
+Result size of Simplifier
+  = {terms: 664,320,
+     types: 18,207,262,
+     coercions: 5,071,820,
+     joins: 0/23,471}
+!!! Simplifier [Main]: finished in 37508.86 milliseconds, allocated 67958.738 megabytes
+*** Float inwards [Main]:
+Result size of Float inwards
+  = {terms: 664,116,
+     types: 18,205,884,
+     coercions: 5,071,820,
+     joins: 0/23,423}
+!!! Float inwards [Main]: finished in 1507.83 milliseconds, allocated 1545.447 megabytes
+*** Called arity analysis [Main]:
+Result size of Called arity analysis
+  = {terms: 664,116,
+     types: 18,205,884,
+     coercions: 5,071,820,
+     joins: 0/23,423}
+!!! Called arity analysis [Main]: finished in 1111.26 milliseconds, allocated 1257.665 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 662,738,
+     types: 18,183,244,
+     coercions: 5,043,428,
+     joins: 0/23,285}
+Result size of Simplifier iteration=2
+  = {terms: 661,086,
+     types: 18,157,932,
+     coercions: 5,015,272,
+     joins: 0/23,103}
+Result size of Simplifier iteration=3
+  = {terms: 659,352,
+     types: 18,131,114,
+     coercions: 4,987,368,
+     joins: 0/22,925}
+Result size of Simplifier iteration=4
+  = {terms: 657,524,
+     types: 18,102,546,
+     coercions: 4,959,732,
+     joins: 0/22,751}
+Result size of Simplifier
+  = {terms: 657,524,
+     types: 18,102,546,
+     coercions: 4,959,732,
+     joins: 0/22,751}
+!!! Simplifier [Main]: finished in 39272.19 milliseconds, allocated 67296.893 megabytes
+*** Demand analysis [Main]:
+Result size of Demand analysis
+  = {terms: 657,524,
+     types: 18,102,546,
+     coercions: 4,959,732,
+     joins: 0/22,751}
+!!! Demand analysis [Main]: finished in 5163.79 milliseconds, allocated 6203.238 megabytes
+*** Worker Wrapper binds [Main]:
+Result size of Worker Wrapper binds
+  = {terms: 657,524,
+     types: 18,102,546,
+     coercions: 4,959,732,
+     joins: 0/22,751}
+!!! Worker Wrapper binds [Main]: finished in 706.68 milliseconds, allocated 129.015 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 655,590,
+     types: 18,071,952,
+     coercions: 4,932,380,
+     joins: 0/22,581}
+Result size of Simplifier iteration=2
+  = {terms: 653,632,
+     types: 18,039,850,
+     coercions: 4,905,328,
+     joins: 0/22,401}
+Result size of Simplifier iteration=3
+  = {terms: 651,750,
+     types: 18,006,616,
+     coercions: 4,878,592,
+     joins: 0/22,243}
+Result size of Simplifier iteration=4
+  = {terms: 649,812,
+     types: 17,971,808,
+     coercions: 4,852,188,
+     joins: 0/22,079}
+Result size of Simplifier
+  = {terms: 649,812,
+     types: 17,971,808,
+     coercions: 4,852,188,
+     joins: 0/22,079}
+!!! Simplifier [Main]: finished in 36206.03 milliseconds, allocated 66949.339 megabytes
+*** Exitification transformation [Main]:
+Result size of Exitification transformation
+  = {terms: 649,812,
+     types: 17,971,808,
+     coercions: 4,852,188,
+     joins: 0/22,079}
+!!! Exitification transformation [Main]: finished in 586.62 milliseconds, allocated 74.838 megabytes
+*** Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = True}) [Main]:
+Result size of Float out(FOS {Lam = Just 0,
+                              Consts = True,
+                              OverSatApps = True/tmp/nix-shell-11916-0/rc: line 1: 11937 Killed                  '/nix/store/0lz1qx8j4dpmpga0gs2b1w17i5ny1xmv-stack-2.1.3.1/bin/stack' $STACK_IN_NIX_EXTRA_ARGS '--internal-re-exec-version=2.1.3.1' 'ghc' '--' '-O' '-v2' 'Main.hs'

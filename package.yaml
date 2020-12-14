@@ -21,13 +21,14 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
-- polysemy
-- polysemy-plugin
+# - polysemy
+# - polysemy-plugin
 - mtl
+# - monad-control
 
 library:
   source-dirs: src
-  ghc-options: -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
+  # ghc-options: -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
   default-extensions:
     - DataKinds
     - FlexibleContexts
