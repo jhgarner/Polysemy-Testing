@@ -1,8 +1,6 @@
 {-# LANGUAGE PartialTypeSignatures #-}
 {-# LANGUAGE Strict #-}
 
-module Lib where
-
 import Control.Monad.State
 
 tester :: MonadState a m => m ()
@@ -71,6 +69,6 @@ manyState =
   . flip evalStateT ()
   . flip evalStateT ()
 
-someFunc :: IO ()
-someFunc = do
+main :: IO ()
+main = do
   manyState tester >>= print

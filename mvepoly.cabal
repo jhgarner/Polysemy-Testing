@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.33.1.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1f8eac0df62dd474709c58eb36e2eac6377453e6287e7dc13b0a3986fcd04b0d
+-- hash: a6a33452c8d153ce6f2db3cbd5ebb9e4de50a4d8c605303b7bb0e2c18b8c3e28
 
 name:           mvepoly
 version:        0.1.0.0
@@ -28,17 +28,16 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Main
   other-modules:
       Paths_mvepoly
   hs-source-dirs:
       src
   default-extensions: DataKinds FlexibleContexts GADTs LambdaCase PolyKinds RankNTypes ScopedTypeVariables TypeApplications TypeOperators TypeFamilies
-  ghc-options: -O2 -flate-specialise -fspecialise-aggressively -fplugin=Polysemy.Plugin
+  ghc-options: -O2
   build-depends:
       base >=4.7 && <5
     , mtl
-    , polysemy
-    , polysemy-plugin
   default-language: Haskell2010
 
 executable mvepoly-exe
@@ -52,8 +51,6 @@ executable mvepoly-exe
       base >=4.7 && <5
     , mtl
     , mvepoly
-    , polysemy
-    , polysemy-plugin
   default-language: Haskell2010
 
 test-suite mvepoly-test
@@ -68,6 +65,4 @@ test-suite mvepoly-test
       base >=4.7 && <5
     , mtl
     , mvepoly
-    , polysemy
-    , polysemy-plugin
   default-language: Haskell2010
